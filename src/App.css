@@ -299,8 +299,10 @@ footer p {
 /* home page responsive start*/
 
 @media (max-width: 1300px) {
-  html {
-    overflow-x: hidden;
+  html,body {
+    overflow-x: hidden !important;
+    position:relative;
+    width: 100%;
   }
 }
 
@@ -381,10 +383,6 @@ footer p {
 
 .info-grid_text p {
   font-size: 10px;
-}
-
-html {
-  overflow-x: hidden;
 }
 
 .btn {
