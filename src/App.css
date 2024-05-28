@@ -299,7 +299,7 @@ footer p {
 /* home page responsive start*/
 
 @media (max-width: 1300px) {
-  body {
+  html {
     overflow-x: hidden;
   }
 }
@@ -372,7 +372,7 @@ footer p {
   }
 
   .hero p {
-    font-size: 10px;
+    font-size: 8px;
 }
 
 .info-grid_text h2 {
@@ -381,6 +381,10 @@ footer p {
 
 .info-grid_text p {
   font-size: 10px;
+}
+
+html {
+  overflow-x: hidden;
 }
 
 .btn {
@@ -392,6 +396,8 @@ footer p {
   width: 80%;
   padding: 20px 30px;
 }
+
+
 }
 
 
