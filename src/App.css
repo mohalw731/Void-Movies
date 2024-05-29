@@ -436,8 +436,7 @@ form {
   padding: 50px;
   gap: 15px;
   border-radius: 30px;
-  padding-top: 60px;
-  padding-bottom: 60px;
+
 }
 
 form input,
@@ -493,6 +492,37 @@ form button:hover {
   background-color: #202020;
   position: relative;
   z-index: 100;
+}
+
+@media (max-width: 450px){
+form {
+  padding: 30px 25px;
+  width: 100%;
+  gap: 10px;
+}
+
+.form {
+  width: 100%;
+}
+
+.form-text h1 {
+  font-size: 25px;
+}
+
+.form-text p {
+  font-size: 12px;
+}
+
+.form-text {
+padding: 15px 0;
+}
+.signup-form__text {
+font-size: 12px;
+}
+form input, form button {
+  padding: 15px 30px;
+}
+
 }
 
 /* Login page End */
