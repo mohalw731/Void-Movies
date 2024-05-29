@@ -436,6 +436,8 @@ form {
   padding: 50px;
   gap: 15px;
   border-radius: 30px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 form input,
