@@ -25,7 +25,7 @@ export default function useRegister() {
             const userCredential = await createUserWithEmailAndPassword(auth, email, password);
             const user = userCredential.user;
             console.log('registered');
-
+            console.log(name)
             if (user) {
                 await setDoc(doc(db, 'User', user.uid), {
                     email: user.email,
@@ -53,5 +53,5 @@ export default function useRegister() {
         }
     };
 
-   return{setName,email, setEmail,setPassword, handleRegister }
+    return { setName, email, setEmail, setPassword, handleRegister }
 }

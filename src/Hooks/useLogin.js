@@ -2,11 +2,14 @@ import { signInWithEmailAndPassword } from 'firebase/auth';
 import React, { useState } from 'react'
 import { auth } from '../Firebase';
 import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 
 export default function useLogin() {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+
+    const navigate = useNavigate()
 
     const handleLogin = async e => {
         e.preventDefault();
@@ -26,6 +29,7 @@ export default function useLogin() {
                 position: 'top-right',
                 className: 'toast-message',
             });
+            navigate('/')
             console.log('logged in')
         } catch (error) {
             if (error.code === 'auth/invalid-credential') {

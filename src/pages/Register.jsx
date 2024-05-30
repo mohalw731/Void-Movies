@@ -13,6 +13,7 @@ function Register() {
             <div className="form">
                 <Form
                     title='Sign up'
+                    none={true}
                     subTitle={'Join now and start using Void Movies.'}
                     linkTo='/login'
                     underText='Do you have an account? '

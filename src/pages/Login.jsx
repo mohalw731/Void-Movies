@@ -18,7 +18,7 @@ function Login() {
                     underText='Don’t have an account? '
                     buttonText='Sign in'
                     underTextSec='Sign up for free'
-                    none='none' 
+                    none={false}
                     setEmail={setEmail}
                     setPassword={setPassword}
                     handleLogin={handleLogin}

@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import useLogin from '../Hooks/useLogin';
 
 function Form({
     title,
@@ -26,25 +25,29 @@ function Form({
                 <h1>{title}</h1>
                 <p>{subTitle}</p>
             </div>
-            <input
-                type="text"
-                name=""
-                id=""
-                placeholder="Name"
-                className={none}
-                onChange={(e) => setName(e.target.value)}
-            />
+            {
+                none && (
+                    <input
+                        type="text"
+                        name="name"
+                        required
+                        placeholder="Name"
+                        className={none}
+                        onChange={(e) => setName(e.target.value)}
+                    />
+                )
+            }
             <input
                 type="email"
-                name=""
-                id=""
+                name="email"
+                required
                 placeholder="Email"
                 onChange={(e) => setEmail(e.target.value)}
             />
             <input
                 type="password"
-                name=""
-                id=""
+                name="password"
+                required
                 placeholder="Password"
                 onChange={(e) => setPassword(e.target.value)}
                 min={6}
