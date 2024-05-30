@@ -25,18 +25,18 @@ export default function useRegister() {
             const userCredential = await createUserWithEmailAndPassword(auth, email, password);
             const user = userCredential.user;
             console.log('registered');
-            console.log(name)
             if (user) {
                 await setDoc(doc(db, 'User', user.uid), {
                     email: user.email,
                     name,
                 });
 
-                toast.success('Successfully Registered', {
+                toast.success('Successfully Registered, Try to Login now', {
                     position: 'top-right',
                     className: 'toast-message',
                 });
             }
+
         } catch (error) {
             if (error.code === 'auth/email-already-in-use') {
                 toast.error('Email is already in use', {

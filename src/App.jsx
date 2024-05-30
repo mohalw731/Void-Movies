@@ -5,19 +5,15 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import MovieHome from './pages/MovieHome';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
-import firebaseApp from './Firebase'; // Make sure to configure Firebase
+import firebaseApp from './Firebase';
+import useUserDeatils from './Hooks/useUserDeatils';
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const auth = getAuth(firebaseApp);
+  // const [isLoggedIn, setIsLoggedIn] = useState(false);
+  // const auth = getAuth(firebaseApp);
 
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      setIsLoggedIn(!!user);
-    });
+  const {isLoggedIn, userDetails} = useUserDeatils()
 
-    return () => unsubscribe();
-  }, [auth]);
 
   return (
     <>
@@ -27,7 +23,7 @@ function App() {
           <Route path='/register' element={<Register />} />
           <Route 
             path='/' 
-            element={isLoggedIn ? <MovieHome /> : <Home />} 
+            element={isLoggedIn ? <MovieHome /> : <Home  />} 
           />
         </Routes>
       </Router>
