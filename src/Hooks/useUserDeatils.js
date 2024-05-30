@@ -8,6 +8,7 @@ export default function useUserDeatils() {
 const [userDetails, setUserDetails] = useState(null)
 const [isLoggedIn, setIsLoggedIn] = useState(false);
 const auth = getAuth(firebaseApp);
+const noUserData =  userDetails == null
 
 const getUserDeatils = async () => {
     auth.onAuthStateChanged(async user =>  {
@@ -30,5 +31,5 @@ useEffect(() => {
 
 
 
-return {userDetails, isLoggedIn}
+return {userDetails, isLoggedIn, noUserData}
 }

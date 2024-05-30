@@ -5,19 +5,19 @@ import Nav from '../components/Nav'
 import useUserDeatils from '../Hooks/useUserDeatils'
 
 function MovieHome() {
+  const { userDetails, isLoggedIn,noUserData } = useUserDeatils()
 
-    const {handleSignOut} = useLogout()
-    const {userDetails} = useUserDeatils()
-
-    console.log(userDetails)
+  console.log(userDetails)
 
   return (
     <div className='row'>
-      <Nav/>
-      movie
-      <button onClick={handleSignOut}>log out</button>
-
-      <Loader/>
+      {
+        noUserData ? (
+         <Loader/>
+        ) :  <div className="movie-home">
+        <Nav />
+      </div>
+      }
     </div>
   )
 }
