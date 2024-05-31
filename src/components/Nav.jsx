@@ -20,8 +20,8 @@ function Nav({ none }) {
     <nav>
       <div className="row nav">
 
-        {
-          isLoggedIn ? '' : <Link>About</Link>
+      {
+          isLoggedIn ? '' : <Link className={`${none}`}>About</Link>
         }
 
         <div className={isLoggedIn ? '' : 'logo'}>
@@ -47,7 +47,7 @@ function Nav({ none }) {
                   <div className="menu">
                     <ul>
                       <li>My List</li>
-                      <li>Profile</li>
+                      <li><Link to='/profile'>Profile</Link></li>
                       <li onClick={handleSignOut}>Sign out</li>
                     </ul>
                   </div>

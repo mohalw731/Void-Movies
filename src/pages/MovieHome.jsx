@@ -5,7 +5,7 @@ import Nav from '../components/Nav'
 import useUserDeatils from '../Hooks/useUserDeatils'
 
 function MovieHome() {
-  const { userDetails, isLoggedIn,noUserData } = useUserDeatils()
+  const { userDetails,noUserData } = useUserDeatils()
 
   console.log(userDetails)
 

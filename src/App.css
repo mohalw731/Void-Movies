@@ -151,7 +151,7 @@ nav a {
   color: red;
 }
 
-.menu ul li:hover{
+.menu ul li:hover {
   background-color: #303030;
 }
 
@@ -207,11 +207,11 @@ nav a {
 }
 
 .hero-register {
-  background-color: #024578;
+  background-color: #024578 !important;
 }
 
 .hero-register:hover {
-  background-color: #0569db;
+  background-color: #0569db !important;
 }
 
 /* Hero End */
@@ -224,8 +224,6 @@ nav a {
 .platforms img {
   width: 100%;
   height: 110px;
-  position: relative;
-  top: -10px;
 }
 
 .platforms p {
@@ -496,6 +494,7 @@ form {
 }
 
 form input,
+.profile-wrapper-box__content input,
 form button {
   padding: 20px 30px;
   border: none;
@@ -578,7 +577,8 @@ form button:hover {
   }
 
   form input,
-  form button {
+  form button,
+  .profile-wrapper-box__content input {
     padding: 15px 30px;
   }
 
@@ -707,4 +707,70 @@ form button:hover {
 .movie-home {
   height: 100dvh;
 }
+
 /* movie home end */
+
+/* Profile page start */
+.profile-wrapper h1 {
+  font-weight: 400;
+  color: white;
+}
+
+.profile-wrapper {
+  z-index: 10;
+  position: relative;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.profile-wrapper__box {
+  background-color: #202020;
+  height: 60vh;
+  border-radius: 30px;
+  display: flex;
+  padding: 50px;
+  width: 80%;
+}
+
+
+.profile-edit__box{
+display: flex;
+align-items: center;
+width: 100%;
+justify-content: space-between;
+color: #818080;
+}
+
+.profile-edit__box span:hover{
+  color: white;
+  cursor: pointer;
+}
+
+.profile-wrapper-box__content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.profile-user__details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+@media (max-width: 670px) {
+  .profile-wrapper__box {
+    width: 100%;
+    padding: 40px 20px;
+  }
+
+  .profile-wrapper h1 {
+    font-size: 30px;
+  }
+}
+
+/* profile page end */

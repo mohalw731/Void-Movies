@@ -12,7 +12,7 @@ const noUserData =  userDetails == null
 
 const getUserDeatils = async () => {
     auth.onAuthStateChanged(async user =>  {
-        const docRef = doc(db, 'User', user.uid)
+        const docRef = doc(db, 'User', user?.uid)
         const docSnap = await getDoc(docRef)
 
         if(docSnap.exists()) {
