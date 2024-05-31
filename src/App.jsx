@@ -15,12 +15,15 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path='/login' element={<Login />} />
-          <Route path='/register' element={<Register />} />
+          <Route path='/login' element={isLoggedIn ? <MovieHome /> : <Login />} />
+
+          <Route path='/register' element={isLoggedIn ? <MovieHome /> : <Register />} />
+
           <Route
             path='/'
             element={isLoggedIn ? <MovieHome /> : <Home />}
           />
+          
           <Route
             path='/profile'
             element={isLoggedIn ? <Profile /> : <Login />}

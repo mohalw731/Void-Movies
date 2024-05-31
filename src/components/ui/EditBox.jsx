@@ -8,7 +8,7 @@ function EditBox({ data , title}) {
                 <p className="profile-edit__type">{title}</p>
                 <p className="profile-user__email">{data}</p>
             </div>
-            <span>Edit</span>
+            {/* <span>Edit</span> */}
         </div>
     )
 }
