@@ -709,7 +709,45 @@ form button:hover {
   height: 100dvh;
 }
 
+.movie-banner {
+position: relative;
+margin-bottom: 40px;
+}
 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 10;
+  height: 100%;
+  width: 100%;
+  border-radius: 30px;
+}
+
+.movie-banner img{
+  width: 100%;
+  border-radius: 30px;
+}
+
+.movie-banner__info {
+position: absolute;
+top: 50%;
+padding: 0 30px;
+max-width: 700px;
+z-index: 10;
+}
+
+.movie-banner__info h1{
+  font-weight: 500;
+  color: white;
+  font-size: 6vw;
+}
+
+
+.swiper-pagination, .swiper-pagination-clickable ,.swiper-pagination-bullets, .swiper-pagination-horizontal{
+  display: none;
+}
 
 /* movie home end */
 
