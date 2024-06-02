@@ -710,8 +710,12 @@ form button:hover {
 }
 
 .movie-banner {
-position: relative;
-margin-bottom: 40px;
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin-bottom: 20px;
+  cursor: pointer;
 }
 
 .overlay {
@@ -734,21 +738,44 @@ margin-bottom: 40px;
 position: absolute;
 top: 50%;
 padding: 0 30px;
-max-width: 700px;
+max-width: 800px;
 z-index: 10;
 }
 
 .movie-banner__info h1{
   font-weight: 500;
   color: white;
-  font-size: 6vw;
+  font-size: 4vw;
 }
-
 
 .swiper-pagination, .swiper-pagination-clickable ,.swiper-pagination-bullets, .swiper-pagination-horizontal{
   display: none;
 }
 
+.banner-reating {
+  color: white;
+  display: flex;
+  align-items: center; 
+  gap: 10px;
+  font-size: 3vw;
+  padding-top: 2vw;
+}
+
+.star {
+  width: 3vw;
+  height: 3vw;
+  color: yellow;
+}
+
+.select-wrapper{
+  display: flex;
+  gap: 10px;
+  padding-bottom: 20px;
+}
+
+.swiper{
+border-radius: 30px;
+}
 /* movie home end */
 
 /* Profile page start */
