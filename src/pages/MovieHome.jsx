@@ -1,10 +1,8 @@
 import Loader from '../components/Loader'
 import Nav from '../components/Nav'
 import useUserDeatils from '../Hooks/useUserDeatils'
-
 import useFetchPopular from '../Hooks/useFetchPopular'
-import MovieBanner from '../components/ui/MovieBanner';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import OptionSelect from '../components/OptionSelect';
 import BannerSwiper from '../components/BannerSwiper';
 
@@ -12,13 +10,7 @@ function MovieHome() {
 
   const [selected, setSelected] = useState('movie')
   const { noUserData } = useUserDeatils()
-  const { isLoading, popularMovie } = useFetchPopular({selected})
-
-  console.log(popularMovie)
-
-  useEffect(() => {
-    console.log(selected)
-  }, [selected])
+  const { isLoading, popularMovie } = useFetchPopular({ selected })
 
   if (isLoading || noUserData || !popularMovie) {
     return <Loader />
@@ -28,10 +20,8 @@ function MovieHome() {
     setSelected(newSelected)
   }
 
-
   return (
     <div className='row'>
-
       <main className="movie-home">
         <Nav />
         <BannerSwiper popularMovie={popularMovie} />
@@ -39,7 +29,6 @@ function MovieHome() {
           switchSelected={switchSelected}
           selected={selected}
           popularMovie={popularMovie} />
-
       </main>
     </div>
   )

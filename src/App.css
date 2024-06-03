@@ -39,7 +39,7 @@ span {
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #024578;
-  border-radius: 5px;
+  /* border-radius: 5px; */
 }
 
 /* Handle on hover */
@@ -716,6 +716,7 @@ form button:hover {
   overflow: hidden;
   margin-bottom: 20px;
   cursor: pointer;
+  
 }
 
 .overlay {

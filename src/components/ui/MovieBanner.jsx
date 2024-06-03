@@ -10,7 +10,7 @@ function MovieBanner({data}) {
                 <h1>{data?.title || data?.original_name}</h1>
                 <div className="banner-reating">
                     <StarFilledIcon className='star' />
-                    <p>{data?.vote_average}</p>
+                    <p>{`${Math.ceil(data?.vote_average)} / 10`}</p>
                 </div>
             </div>
         </div>
