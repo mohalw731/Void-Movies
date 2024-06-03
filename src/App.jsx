@@ -29,6 +29,11 @@ function App() {
             element={isLoggedIn ? <Profile /> : <Login />}
           />
 
+          <Route
+            path='/details/:id'
+            element={isLoggedIn ? <Profile /> : <Login />}
+          />
+
         </Routes>
       </Router>
     </>

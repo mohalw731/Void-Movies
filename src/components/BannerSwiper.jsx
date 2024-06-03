@@ -23,7 +23,7 @@ function BannerSwiper({ popularMovie }) {
             {
                 popularMovie.map(data =>
                     <SwiperSlide key={data?.id}>
-                        <MovieBanner data={data} />
+                        <MovieBanner data={data}/>
                     </SwiperSlide>
                 )
             }
