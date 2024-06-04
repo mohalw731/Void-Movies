@@ -737,7 +737,7 @@ form button:hover {
 
 .movie-banner__info {
   position: absolute;
-  top: 50%;
+  top: 20%;
   padding: 0 30px;
   max-width: 800px;
   z-index: 10;
@@ -761,14 +761,20 @@ form button:hover {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 3vw;
+  font-size: 2vw;
   padding-top: 2vw;
 }
 
 .star {
-  width: 3vw;
-  height: 3vw;
+  width: 2vw;
+  height: 2vw;
   color: yellow;
+}
+
+.movie-banner__info p {
+  color: #d9d9d9;
+  padding-top: 1vw;
+  font-size: 1vw;
 }
 
 .select-wrapper {
@@ -812,6 +818,37 @@ form button:hover {
 
 .carusel {
   padding: 30px 0;
+}
+
+
+@media (max-width: 950px) {
+  .movie-banner__info p{
+    font-size: 2vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .movie-banner__info p{
+    display: none;
+  }
+
+  .movie-banner__info{
+    top: 50%;
+  }
+
+  .banner-reating p {
+    display: block;
+    font-size: 3vw;
+  }
+
+  .banner-reating{
+    gap: 5px;
+  }
+
+  .star {
+    width: 3vw;
+    height: 3vw;
+  }
 }
 /* movie home end */
 
