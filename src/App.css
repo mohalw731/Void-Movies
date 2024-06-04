@@ -28,7 +28,7 @@ span {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 15px;
+  width: 10px;
 }
 
 /* Track */
@@ -716,7 +716,6 @@ form button:hover {
   overflow: hidden;
   margin-bottom: 20px;
   cursor: pointer;
-
 }
 
 .overlay {
@@ -737,16 +736,18 @@ form button:hover {
 
 .movie-banner__info {
   position: absolute;
-  top: 20%;
+  top: 30%;
   padding: 0 30px;
   max-width: 800px;
   z-index: 10;
+  width: 100%;
+  height: 100%;
 }
 
 .movie-banner__info h1 {
   font-weight: 500;
   color: white;
-  font-size: 2.5vw;
+  font-size: 3vw;
   padding: 10px 0;
 }
 
@@ -774,7 +775,7 @@ form button:hover {
 
 .movie-banner__info p {
   color: #d9d9d9;
-  font-size: .9vw;
+  font-size: 1.2vw;
 }
 
 .select-wrapper {

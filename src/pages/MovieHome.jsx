@@ -33,17 +33,22 @@ function MovieHome() {
           switchSelected={switchSelected}
           selected={selected}
           popularMovie={popularMovie} />
+          
         <Carousel
           popularMovie={popularMovie}
-          title={`Popular ${selected === 'movie' ? 'Movies' : 'TV Shows'}`} />
+          title={`Popular ${selected === 'movie' ? 'Movies' : 'TV Shows'}`} 
+          type='popular'/>
 
         <Carousel
           popularMovie={popularMovie}
-          title={`Trending ${selected === 'movie' ? 'Movies' : 'TV Shows'}`} />
+          title={`Trending ${selected === 'movie' ? 'Movies' : 'TV Shows'}`} 
+          type='trending'/>
 
         <Carousel
           popularMovie={popularMovie}
-          title={`Upcoming ${selected === 'movie' ? 'Movies' : 'TV Shows'}`} />
+          title={`Upcoming ${selected === 'movie' ? 'Movies' : 'TV Shows'}`} 
+          type='upcoming'
+          />
 
       </main>
     </div>

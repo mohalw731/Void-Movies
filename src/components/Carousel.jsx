@@ -4,9 +4,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { PlusIcon } from '@radix-ui/react-icons';
 import { Link } from 'react-router-dom';
+import useFetchPopular from '../Hooks/useFetchPopular';
 
 
-function Carousel({ popularMovie, title }) {
+function Carousel({ popularMovie,title }) {
 
     var settings = {
         dots: true,

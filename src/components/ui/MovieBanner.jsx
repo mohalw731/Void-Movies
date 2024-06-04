@@ -15,7 +15,6 @@ function MovieBanner({ data }) {
                         <StarFilledIcon className='star' />
                         <p>{`${Math.ceil(data?.vote_average)} / 10`}</p>
                     </div>
-                    
                 </div>
             </Link>
         </div>
