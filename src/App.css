@@ -723,7 +723,7 @@ form button:hover {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, .5);
   z-index: 10;
   height: 100%;
   width: 100%;
@@ -746,7 +746,8 @@ form button:hover {
 .movie-banner__info h1 {
   font-weight: 500;
   color: white;
-  font-size: 4vw;
+  font-size: 2.5vw;
+  padding: 10px 0;
 }
 
 .swiper-pagination,
@@ -761,20 +762,19 @@ form button:hover {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 2vw;
-  padding-top: 2vw;
+  font-size: 1.5vw;
+  padding-top: 10px;
 }
 
 .star {
-  width: 2vw;
-  height: 2vw;
+  width: 1.5vw;
+  height: 1.5vw;
   color: yellow;
 }
 
 .movie-banner__info p {
   color: #d9d9d9;
-  padding-top: 1vw;
-  font-size: 1vw;
+  font-size: .9vw;
 }
 
 .select-wrapper {
@@ -789,21 +789,31 @@ form button:hover {
 
 .card {
   width: 100px;
+  position: relative;
 }
 
 .card img {
-  width: 100%; 
+  width: 100%;
   border-radius: 15px;
+  object-fit: cover;
 }
 
 .slick-slider {
-  margin:0 -15px;
-}
-.slick-slide {
-  padding:5px;
+  margin: 0 -15px;
 }
 
-.slick-dots{
+.slick-slide {
+  padding: 5px;
+}
+
+.slick-prev:before, .slick-next:before { font-family: "slick"; font-size: 50px; line-height: 0; color: white; opacity: 0.75; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }   
+
+.slick-prev:before { content: "‹"; }
+[dir="rtl"] .slick-prev:before { content: "›"; }
+
+[dir="rtl"] .slick-next { left: -10px; top: 70px; right: auto; }
+.slick-next:before { content: "›"; }
+.slick-dots {
   display: none !important;
 }
 
@@ -817,22 +827,74 @@ form button:hover {
 }
 
 .carusel {
-  padding: 30px 0;
+  padding: 20px 0;
+}
+
+.card-hover_info {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 15px;
+  padding: 0 5px;
+  opacity: 0;
+}
+
+.card-hover_info:hover{
+ opacity: 1;
+  cursor: pointer;
+}
+
+.card-hover_info h2,
+.AddTo-list_btn {
+  text-align: center;
+  font-size: .8vw;
+  position: relative;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+}
+
+.AddTo-list_btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  background-color: #303030;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 70%;
+  cursor: pointer;
+  left: 50%;
+}
+
+.AddTo-list_btn:hover {
+  background-color: #202020;
 }
 
 
 @media (max-width: 950px) {
-  .movie-banner__info p{
+  .movie-banner__info p {
+    font-size: 1.7vw;
+  }
+
+  .card-hover_info h2 {
     font-size: 2vw;
   }
 }
 
 @media (max-width: 500px) {
-  .movie-banner__info p{
+  .movie-banner__info p {
     display: none;
   }
 
-  .movie-banner__info{
+  .movie-banner__info {
     top: 50%;
   }
 
@@ -841,7 +903,7 @@ form button:hover {
     font-size: 3vw;
   }
 
-  .banner-reating{
+  .banner-reating {
     gap: 5px;
   }
 
@@ -849,7 +911,12 @@ form button:hover {
     width: 3vw;
     height: 3vw;
   }
+
+  .card-hover_info h2 {
+    font-size: 3vw;
+  }
 }
+
 /* movie home end */
 
 /* Profile page start */
@@ -916,3 +983,4 @@ form button:hover {
 }
 
 /* profile page end */
+
