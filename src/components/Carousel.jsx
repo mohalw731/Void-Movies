@@ -5,9 +5,10 @@ import "slick-carousel/slick/slick-theme.css";
 import { PlusIcon } from '@radix-ui/react-icons';
 import { Link } from 'react-router-dom';
 import useFetchPopular from '../Hooks/useFetchPopular';
+import Card from './ui/Card';
 
 
-function Carousel({ popularMovie,title }) {
+function Carousel({ popularMovie, title }) {
 
     var settings = {
         lazyLoad: true, // Changed to a valid value
@@ -60,26 +61,14 @@ function Carousel({ popularMovie,title }) {
             }
         ]
     };
-    
+
 
     return (
         <div className="carusel">
             <h2>{title}</h2>
             <Slider {...settings}>
                 {popularMovie.map(data => (
-
-                    <div className="card" key={data?.id}>
-                        {/* <Link to={`/details/${data?.id}`}> */}
-                            <img src={`https://image.tmdb.org/t/p/original/${data?.poster_path}`} alt="" />
-                            <div className="card-hover_info">
-                                <h2>{data?.title || data?.original_name}</h2>
-                                <button className="AddTo-list_btn">
-                                    <PlusIcon />
-                                </button>
-                            </div>
-                        {/* </Link> */}
-                    </div>
-
+                  <Card data={data}/>
                 ))}
             </Slider>
         </div>

@@ -6,8 +6,6 @@ import { useState } from 'react';
 import OptionSelect from '../components/OptionSelect';
 import BannerSwiper from '../components/BannerSwiper';
 import Carousel from '../components/Carousel';
-import Footer from '../components/Footer';
-
 
 function MovieHome() {
 
@@ -22,7 +20,6 @@ function MovieHome() {
   const switchSelected = (newSelected) => {
     setSelected(newSelected)
   }
-
 
   return (
     <div className='row-movie'>

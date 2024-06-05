@@ -54,7 +54,7 @@ span {
   padding: 0 20px;
 }
 
-.row-movie{
+.row-movie {
   max-width: 2000px;
   width: 100%;
   padding: 20px;
@@ -124,7 +124,12 @@ nav a {
 .nav-row {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 20px;
+}
+
+.search-icon {
+  width: 30px;
+  height: 30px;
 }
 
 .bage {
@@ -172,7 +177,7 @@ nav a {
   padding: 20px;
   width: 180px;
   position: absolute;
-  top: 60px;
+  top: 70px;
   right: 30px;
   border-radius: 20px;
 }
@@ -796,7 +801,6 @@ form button:hover {
 }
 
 .card {
-  width: 100px;
   position: relative;
 }
 
@@ -806,8 +810,12 @@ form button:hover {
   object-fit: cover;
 }
 
+.card img:hover {
+  cursor: pointer;
+  transform: scale(.95);
+}
+
 .slick-slider {
-  margin: 0 -15px;
   overflow-x: hidden;
 }
 
@@ -815,23 +823,11 @@ form button:hover {
   padding: 5px;
 }
 
-.slick-prev:before, .slick-next:before {font-family: "slick"; font-size: 50px; line-height: 0; color: white; opacity: 0.75; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }   
-
-.slick-prev:before { content: "‹"; }
-[dir="rtl"] .slick-prev:before { content: "›"; }
-
-[dir="rtl"] .slick-next { left: -10px; top: 70px; right: auto; }
-.slick-next:before { content: "›"; }
-.slick-dots {
-  display: none !important;
-}
-
 .carusel h2 {
   color: white;
   padding-bottom: 10px;
   font-weight: 300;
   position: relative;
-  left: -10px;
   font-size: 20px;
 }
 
@@ -839,62 +835,10 @@ form button:hover {
   padding: 20px 0;
 }
 
-.card-hover_info {
-  background-color: rgba(0, 0, 0, 0.6);
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  border-radius: 15px;
-  padding: 0 5px;
-  opacity: 0;
-}
-
-.card-hover_info:hover{
- opacity: 1;
-  cursor: pointer;
-}
-
-.card-hover_info h2,
-.AddTo-list_btn {
-  text-align: center;
-  font-size: .8vw;
-  position: relative;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -30%);
-}
-
-.AddTo-list_btn {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: none;
-  color: white;
-  background-color: #303030;
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 70%;
-  cursor: pointer;
-  left: 50%;
-}
-
-.AddTo-list_btn:hover {
-  background-color: #202020;
-}
-
 
 @media (max-width: 950px) {
   .movie-banner__info p {
     font-size: 1.7vw;
-  }
-
-  .card-hover_info h2 {
-    font-size: 2vw;
   }
 }
 
@@ -921,12 +865,9 @@ form button:hover {
     height: 3vw;
   }
 
-  .card-hover_info h2 {
-    font-size: 3vw;
-  }
   .carusel {
     padding: 10px 0;
-}
+  }
 }
 
 /* movie home end */
@@ -996,3 +937,110 @@ form button:hover {
 
 /* profile page end */
 
+/* Search page start */
+.search-page{
+width: 100%;
+height: 100dvh;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+.search__input {
+  font-size: 15px;
+  background-color: #242424;
+  border: none;
+  color: white;
+  padding: 20px;
+  border-radius: 30px;
+  transition: all ease-in-out .5s;
+  margin-right: -2rem;
+  width: 700px;
+}
+
+.search__input:hover,
+.search__input:focus {
+  box-shadow: 0 0 1em #00000013;
+}
+
+.search__input::-webkit-input-placeholder {
+  font-weight: 100;
+  color: #ccc;
+}
+
+
+.search__button {
+  border: none;
+  background-color: transparent;
+  margin-top: .1em;
+  position: relative;
+  top: 4px;
+  left: -10px;
+}
+
+.search__button:hover {
+  cursor: pointer;
+}
+
+.search__icon {
+  height: 20px;
+  width: 20px;
+  color: #b4b4b4;
+}
+
+
+.search-card img {
+  width: 100%;
+  object-fit: cover;
+  height: 350px;
+}
+
+.searched-movies__container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 250px);
+  grid-gap: 20px 15px;
+  margin-top: 20px;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.no-search{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+color: #818080;
+font-weight: 300;
+font-size: 3vw;
+}
+
+@media (max-width: 1120px) {
+  .searched-movies__container{
+    grid-template-columns: repeat(auto-fill, 150px);
+  }
+
+  .search-card img {
+    width: 100%;
+    object-fit: cover;
+    height: 230px;
+  }
+}
+
+@media (max-width: 780px) {
+  .search__input{
+    width: 500px;
+  }
+}
+
+@media (max-width: 560px) {
+  .search__input{
+    width: 300px;
+  }
+}
+/* Search page end */

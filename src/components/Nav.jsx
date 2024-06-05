@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import Login from '../pages/Login'
 import useUserDeatils from '../Hooks/useUserDeatils'
 import useLogout from '../Hooks/useLogout'
+import { MagnifyingGlassIcon } from '@radix-ui/react-icons'
 
 function Nav({ none, className }) {
 
@@ -18,7 +19,7 @@ function Nav({ none, className }) {
 
   return (
     <nav>
-      <div className={`nav row ${isLoggedIn ? className : ''}`}>
+      <div className={`nav row ${isLoggedIn && className}`}>
 
       {
           isLoggedIn ? '' : <Link className={`${none}`}>About</Link>
@@ -35,7 +36,7 @@ function Nav({ none, className }) {
             <div className="loggedin-nav">
 
               <div className="nav-row">
-                <Link>Search</Link>
+                <Link to='/search'><MagnifyingGlassIcon className={`search-icon ${none}`}/></Link>
 
                 <span className="bage" onClick={toggleMenu}>
                   {bageLetter}
