@@ -10,13 +10,14 @@ import useFetchPopular from '../Hooks/useFetchPopular';
 function Carousel({ popularMovie,title }) {
 
     var settings = {
-        dots: true,
-        lazyLoad: true,
+        lazyLoad: true, // Changed to a valid value
         infinite: true,
         speed: 500,
         slidesToShow: 8,
         slidesToScroll: 4,
         initialSlide: 0,
+        autoplay: true,
+        autoplaySpeed: 2500, // Changed to a more practical value
         responsive: [
             {
                 breakpoint: 1024,
@@ -25,21 +26,21 @@ function Carousel({ popularMovie,title }) {
                     slidesToScroll: 3,
                     infinite: true,
                     dots: true,
-                    lazyLoad: true,
+                    lazyLoad: true
                 }
             },
             {
-                breakpoint: 850, // new breakpoint
+                breakpoint: 850,
                 settings: {
                     slidesToShow: 5,
-                    slidesToScroll: 2,
+                    slidesToScroll: 2
                 }
             },
             {
-                breakpoint: 700, // new breakpoint
+                breakpoint: 700,
                 settings: {
                     slidesToShow: 4,
-                    slidesToScroll: 2,
+                    slidesToScroll: 2
                 }
             },
             {
@@ -59,6 +60,7 @@ function Carousel({ popularMovie,title }) {
             }
         ]
     };
+    
 
     return (
         <div className="carusel">

@@ -54,6 +54,13 @@ span {
   padding: 0 20px;
 }
 
+.row-movie{
+  max-width: 2000px;
+  width: 100%;
+  padding: 20px;
+  margin: 0 auto;
+}
+
 .blue-shadow {
   -webkit-box-shadow: 0px -1px 300px 110px rgba(0, 143, 253, 0.22);
   -moz-box-shadow: 0px -1px 300px 110px rgba(0, 143, 253, 0.22);
@@ -747,7 +754,7 @@ form button:hover {
 .movie-banner__info h1 {
   font-weight: 500;
   color: white;
-  font-size: 3vw;
+  font-size: 3dvw;
   padding: 10px 0;
 }
 
@@ -775,7 +782,7 @@ form button:hover {
 
 .movie-banner__info p {
   color: #d9d9d9;
-  font-size: 1.2vw;
+  font-size: 100%;
 }
 
 .select-wrapper {
@@ -801,13 +808,14 @@ form button:hover {
 
 .slick-slider {
   margin: 0 -15px;
+  overflow-x: hidden;
 }
 
 .slick-slide {
   padding: 5px;
 }
 
-.slick-prev:before, .slick-next:before { font-family: "slick"; font-size: 50px; line-height: 0; color: white; opacity: 0.75; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }   
+.slick-prev:before, .slick-next:before {font-family: "slick"; font-size: 50px; line-height: 0; color: white; opacity: 0.75; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }   
 
 .slick-prev:before { content: "‹"; }
 [dir="rtl"] .slick-prev:before { content: "›"; }
@@ -916,6 +924,9 @@ form button:hover {
   .card-hover_info h2 {
     font-size: 3vw;
   }
+  .carusel {
+    padding: 10px 0;
+}
 }
 
 /* movie home end */

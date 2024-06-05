@@ -11,10 +11,6 @@ function MovieBanner({ data }) {
                 <div className="movie-banner__info">
                     <h1>{data?.title || data?.original_name}</h1>
                     <p>{data?.overview}</p>
-                    <div className="banner-reating">
-                        <StarFilledIcon className='star' />
-                        <p>{`${Math.ceil(data?.vote_average)} / 10`}</p>
-                    </div>
                 </div>
             </Link>
         </div>

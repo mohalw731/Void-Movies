@@ -6,6 +6,7 @@ import Register from './pages/Register';
 import MovieHome from './pages/MovieHome';
 import useUserDeatils from './Hooks/useUserDeatils';
 import Profile from './pages/Profile';
+import Details from './pages/Details';
 
 function App() {
 
@@ -31,7 +32,7 @@ function App() {
 
           <Route
             path='/details/:id'
-            element={isLoggedIn ? <Profile /> : <Login />}
+            element={isLoggedIn ? <Details /> : <Login />}
           />
 
         </Routes>

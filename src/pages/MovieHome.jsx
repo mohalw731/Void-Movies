@@ -6,13 +6,14 @@ import { useState } from 'react';
 import OptionSelect from '../components/OptionSelect';
 import BannerSwiper from '../components/BannerSwiper';
 import Carousel from '../components/Carousel';
+import Footer from '../components/Footer';
 
 
 function MovieHome() {
 
   const [selected, setSelected] = useState('movie')
   const { noUserData } = useUserDeatils()
-  const { isLoading, popularMovie } = useFetchPopular({ selected })
+  const { isLoading, popularMovie,  } = useFetchPopular({ selected })
 
   if (isLoading || noUserData || !popularMovie) {
     return <Loader />
@@ -24,9 +25,9 @@ function MovieHome() {
 
 
   return (
-    <div className='row'>
+    <div className='row-movie'>
       <main className="movie-home">
-        <Nav />
+        <Nav className='row-movie'/>
         <BannerSwiper
           popularMovie={popularMovie} />
         <OptionSelect

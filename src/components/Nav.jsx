@@ -5,7 +5,7 @@ import Login from '../pages/Login'
 import useUserDeatils from '../Hooks/useUserDeatils'
 import useLogout from '../Hooks/useLogout'
 
-function Nav({ none }) {
+function Nav({ none, className }) {
 
   const { isLoggedIn, userDetails } = useUserDeatils()
   const [showMenu, setShowMenu] = useState(false)
@@ -18,7 +18,7 @@ function Nav({ none }) {
 
   return (
     <nav>
-      <div className="row nav">
+      <div className={`nav row ${isLoggedIn ? className : ''}`}>
 
       {
           isLoggedIn ? '' : <Link className={`${none}`}>About</Link>
