@@ -14,28 +14,30 @@ function Profile() {
 
     const email = userDetails?.email
 
+    if (noUserData) {
+        return <Loader />
+    }
+
     return (
         <div className="row">
-            {noUserData ? <Loader /> :
-                <div className="profile-page">
-                    <Nav />
-                    <div className="profile-wrapper">
-                        <h1>Welcome back {capitalizedFirstLetter}</h1>
-                        <div className="profile-wrapper__box">
-                            <div className="profile-wrapper-box__content">
-                                <EditBox
-                                    data={email}
-                                    title='Email:' />
+            <div className="profile-page">
+                <Nav />
+                <div className="profile-wrapper">
+                    <h1>Welcome back {capitalizedFirstLetter}</h1>
+                    <div className="profile-wrapper__box">
+                        <div className="profile-wrapper-box__content">
+                            <EditBox
+                                data={email}
+                                title='Email:' />
 
-                                <EditBox
-                                    title='Name:'
-                                    data={capitalizedFirstLetter}
-                                />
-                            </div>
+                            <EditBox
+                                title='Name:'
+                                data={capitalizedFirstLetter}
+                            />
                         </div>
                     </div>
                 </div>
-            }
+            </div>
         </div>
     );
 }
