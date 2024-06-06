@@ -323,31 +323,6 @@ nav a {
   right: 1200px;
 }
 
-.genre {
-  background-color: #202020;
-  color: white;
-  width: 30%;
-  padding: 16px 32px;
-  text-align: center;
-  border-radius: 50px;
-
-}
-
-.genre:hover {
-  background-color: #282828;
-  cursor: pointer;
-}
-
-.genres {
-  gap: 15px;
-  display: flex;
-  position: relative;
-  top: 10px;
-  right: 90px;
-
-}
-
-
 .save-grid-ui {
   background-color: #202020;
   width: 100px;
@@ -721,6 +696,8 @@ form button:hover {
   height: 100dvh;
 }
 
+/* movie banner start */
+
 .movie-banner {
   position: relative;
   width: 100%;
@@ -770,15 +747,6 @@ form button:hover {
   display: none;
 }
 
-.banner-reating {
-  color: white;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 1.5vw;
-  padding-top: 10px;
-}
-
 .star {
   width: 1.5vw;
   height: 1.5vw;
@@ -799,7 +767,7 @@ form button:hover {
 .swiper {
   border-radius: 30px;
 }
-
+/* Movie banner end */
 .card {
   position: relative;
 }
@@ -1003,7 +971,7 @@ height: 100dvh;
 
 .searched-movies__container{
   display: grid;
-  grid-template-columns: repeat(auto-fill, 250px);
+  grid-template-columns: repeat(auto-fill, 200px);
   grid-gap: 20px 15px;
   margin-top: 20px;
   justify-content: center;
@@ -1023,6 +991,7 @@ font-size: 3vw;
 @media (max-width: 1120px) {
   .searched-movies__container{
     grid-template-columns: repeat(auto-fill, 150px);
+    gap: 10;
   }
 
   .search-card img {
@@ -1044,3 +1013,21 @@ font-size: 3vw;
   }
 }
 /* Search page end */
+
+
+/* genres start */
+
+select {
+  padding: 10px 20px;
+  border-radius:50px ;
+  -webkit-appearance: none;
+  width: 150px;
+  background-color: #242424;
+  color: white;
+  border: none;
+}
+
+.genre{
+  padding: 10px 20px;
+  font-size: 12px;
+}

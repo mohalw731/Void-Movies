@@ -6,6 +6,7 @@ import { useState } from 'react';
 import OptionSelect from '../components/OptionSelect';
 import BannerSwiper from '../components/BannerSwiper';
 import Carousel from '../components/Carousel';
+import Genres from '../components/Genres';
 
 function MovieHome() {
 
@@ -31,6 +32,8 @@ function MovieHome() {
           switchSelected={switchSelected}
           selected={selected}
           popularMovie={popularMovie} />
+
+          <Genres selected={selected} />
           
         <Carousel
           popularMovie={popularMovie}

@@ -21,9 +21,7 @@ function Nav({ none, className }) {
     <nav>
       <div className={`nav row ${isLoggedIn && className}`}>
 
-      {
-          isLoggedIn ? '' : <Link className={`${none}`}>About</Link>
-        }
+      {isLoggedIn ? '' : <Link className={`${none}`}>About</Link>}
 
         <div className={isLoggedIn ? '' : 'logo'}>
           <Link to='/'>
@@ -31,8 +29,7 @@ function Nav({ none, className }) {
           </Link>
         </div>
 
-        {
-          isLoggedIn ? (
+        {isLoggedIn ? (
             <div className="loggedin-nav">
 
               <div className="nav-row">
@@ -43,26 +40,20 @@ function Nav({ none, className }) {
                 </span>
               </div>
 
-              {
-                showMenu ? (
+              {showMenu &&
                   <div className="menu">
                     <ul>
                       <li>My List</li>
                       <li><Link to='/profile'>Profile</Link></li>
                       <li onClick={handleSignOut}>Sign out</li>
                     </ul>
-                  </div>
-                ) : ''
-              }
+                  </div>}
             </div>
           ) :
-
             <Link to='/login'>
               <button className={`btn ${none}`}>Login</button>
-            </Link>
-
-        }
-
+            </Link>}
+            
       </div>
       <div className="blue-shadow" />
     </nav>

@@ -32,16 +32,10 @@ function Search() {
                     </div>
                 </div>
                 <div className="searched-movies__container">
-                    <h2 className='no-search'>Type something to search</h2>
-
-                    {
-                        searchInput === '' ?
-                            <h2 className='no-search'>Type something to search</h2>
-                            :
-                            dataDetails?.map(data => {
+                   {!dataDetails?.length && <h2 className='no-search'>Type something to search</h2>}
+                           {dataDetails?.map(data => {
                                 return <Card data={data} className='search-card' />
-                            })
-                    }
+                            })}
                 </div>
             </main>
         </div>
